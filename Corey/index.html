@@ -101,6 +101,36 @@
 
 	</p>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.gift-img').forEach(function (el) {
+    // accessibility + mobile friendliness
+    el.setAttribute('role', 'button');
+    el.setAttribute('tabindex', '0');
+
+    const toggle = () => el.classList.toggle('active');
+
+    // Desktop + iOS/Android tap
+    el.addEventListener('click', toggle);
+
+    // Some mobile browsers only fire touch events first—handle those too
+    el.addEventListener('touchstart', function (e) {
+      e.preventDefault(); // avoid ghost click / double-trigger
+      toggle();
+    }, { passive: false });
+
+    // Keyboard support
+    el.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggle();
+      }
+    });
+  });
+});
+</script>
+
+
 
 
 </body>
