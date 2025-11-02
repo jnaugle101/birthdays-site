@@ -176,4 +176,14 @@ body {
 #gift-future { aspect-ratio: 3 / 4; }
 
 
+/* make blocks obviously tappable/clickable */
+.gift-img { cursor: pointer; }
+
+/* cap size on laptops/desktops so GIFs fit comfortably */
+@media (min-width: 1024px) {
+  .gift-img { width: 640px; }  /* was up to 800px; smaller = fully viewable */
+}
+
+
+
 
