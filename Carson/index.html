@@ -5,7 +5,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
-	<link rel='stylesheet' href='style.css' />
+	<link rel='stylesheet' href='./style.css?v=2'/>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Birthday Gift Site</title>
@@ -21,54 +21,151 @@
 
 	<div id='header'>
 
-		<h1> Today is Shannon's Birthday 🎉</h1>
-		<img id='wife' src='shannon1.jpeg'>
-		<h2 id='bday'> 51 Years Old</h2>
-		<h2 id='bday'>08.07.1975</h2>
+		<h1> Today is Carson's Birthday 🎉</h1>
+		<img id='carson' src='carson1.jpeg'>
+		<img id='carson' src='carson2.jpeg'>
+		<h2 id='bday'> 24 Years Old</h2>
+		<h2 id='bday'>12.12.2001</h2>
+
+		<button id="music-btn"
+        style="margin:12px 0;padding:10px 16px;border-radius:10px;border:none;cursor:pointer;">
+  ▶️ Play music
+</button>
+
+<audio id="bgm" src="carson.mp3" preload="auto" loop></audio>
+
+<script>
+  (function () {
+    const btn = document.getElementById('music-btn');
+    const audio = document.getElementById('bgm');
+    let playing = false;
+
+    const update = () => btn.textContent = playing ? '⏸️ Pause music' : '▶️ Play music';
+
+    btn.addEventListener('click', async () => {
+      try {
+        if (!playing) { await audio.play(); playing = true; }
+        else { audio.pause(); playing = false; }
+        update();
+      } catch (e) {
+        console.log('Playback blocked until user interacts:', e);
+      }
+    });
+
+    update();
+  })();
+</script>
+
 
 	</div>	
 
-	<div class='gift-section'>
-		<h2 class='gift-title'>Here is how happy I am for you! 💝</h2>
-		<h3 class='gift-hint'>(Hoover over for a hint)</h3>
-		<div class='gift-img'></div>
+	<div id='notes'>
+		<h2>Major Events</h2>
+		<p>World Changing Event: September 11 terrorist attack in New York City</p>
+<p>The Top Song was All For You by Janet Jackson</p>
+<p>The Movies to Watch include Shrek, Harry Potter and the Sorcerer’s Stone, Monsters Inc, Legally Blonde and Ocean’s 11</p>
+<p>The Most Famous Fictional Person in America was probably Harry Potter</p>
+<p>The Most Famous Real Person in America was probably Angelina Jolie</p>
+<p>The 21st century didn’t begin on January 1st, 2000. It actually began on January 1st, 2001. This is because the first year of a century is the year 01, never 00.</p>
+<p>Price of Playstation 2: $299.97</p>
+<p>Game Boy Advance: $89.97</p>
+<p>iPod (1st Generation): $399.00</p>
+<p>The Funny Late Night Host: Jay Leno</p>
+<p>The Controversial Funny Guy: Gilbert Gottfried</p>
+<p>The Longest English Sentence Written: The longest sentence in a book is believed to appear in the 2001 novel The Rotters’ Club by Jonathan Coe which consisted of 13,955 words.</p>
+<p>Creepypasta: Although short, horror-themed stories have been told forever, the first Creepypasta story was Ted the Caver on an Angelfire website.</p>
+<p>Barry Bonds hit 73 Home Runs*. * steroid use was allegedly involved</p>
+<p>Pizza Hut Delivered a Pizza to the International Space Station. It cost over a million dollars.</p>
+
+<p>Cost of a Super Bowl ad in 2001: $2,100,000</p>
+
+<p>iPod was released in October 2001.</p>
+
+<p>The X-Box came out in November 2001.</p>
+
+<p>…Everybody else was watching SpongeBob Squarepants</p>
+<p>December 15, 2001 - U Got It Bad – Usher</p>
 
 
+<p>World Series Champions: Arizona Diamondbacks</p>
+<p>Super Bowl XXXV Champions: Baltimore Ravens</p>
+<p>NBA Champions: Los Angeles Lakers</p>
+<p>Stanley Cup Champs: Colorado Avalanche</p>
+<p>U.S. Open Golf Retief Goosen</p>
+<p>U.S. Tennis: (Men/Ladies) Lleyton Hewitt/Venus Williams</p>
+<p>Wimbledon (Men/Women): Goran Ivanisevic/Venus Williams</p>
+<p>NCAA Football Champions: Miami</p>
+<p>NCAA Basketball Champions: Duke</p>
+<p>Kentucky Derby: Monarchos</p>
 
 	</div>
 
 
 
-	<div class='gift-section'>
-		<h2 class='gift-title'>Here is how much I love you 🥰</h2>
-		<div class='gift-img' id='gift-love'></div>
 
+
+	<div class='gift-section'>
+  		<h2 class='gift-title'>Here is how happy I am for you! 🕺🏻</h2>
+  		<h3 class='gift-hint'>(Hover or tap for a hint)</h3>
+ 	<div class='gift-img' onclick="this.classList.toggle('active')"></div>
 	</div>
 
 	<div class='gift-section'>
-		<h2 class='gift-title'>Here is how people react when you walk in the room! 🤩</h2>
-		<div class='gift-img' id='gift-friends'></div>
-
+  		<h2 class='gift-title'>Here is how much We love you 🥰</h2>
+  	<div class='gift-img' id='gift-love' onclick="this.classList.toggle('active')"></div>
 	</div>
 
 	<div class='gift-section'>
-		<h2 class='gift-title'>You will always be my future! 👩‍❤️‍👨</h2>
-		<div class='gift-img' id='gift-future'></div>
-
+  		<h2 class='gift-title'>Here is how people react when you walk in the room! 🤩</h2>
+  	<div class='gift-img' id='gift-friends' onclick="this.classList.toggle('active')"></div>
 	</div>
 
+	<div class='gift-section'>
+  		<h2 class='gift-title'>You will always be a part of our Family 🧑‍🧑‍🧒‍🧒</h2>
+  	<div class='gift-img' id='gift-future' onclick="this.classList.toggle('active')"></div>
+	</div>
 
 	<div class='gift-img-cheers'>
-		<h2 class='gift-title'>Enjoy Your Birthday! 🥂</h2>
-		<div class='gift-img' id='gift-img-cheers'></div>
-
+  		<h2 class='gift-title'>Enjoy Your Birthday! 🥂</h2>
+  	<div class='gift-img' id='gift-img-cheers' onclick="this.classList.toggle('active')"></div>
 	</div>
+
 
 	<p id='footer'>
 
 		Gift Websites Built by Jeremy... For your own, please email: jeremyn24503@gmail.com
 
 	</p>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.gift-img').forEach(function (el) {
+    // accessibility + mobile friendliness
+    el.setAttribute('role', 'button');
+    el.setAttribute('tabindex', '0');
+
+    const toggle = () => el.classList.toggle('active');
+
+    // Desktop + iOS/Android tap
+    el.addEventListener('click', toggle);
+
+    // Some mobile browsers only fire touch events first—handle those too
+    el.addEventListener('touchstart', function (e) {
+      e.preventDefault(); // avoid ghost click / double-trigger
+      toggle();
+    }, { passive: false });
+
+    // Keyboard support
+    el.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggle();
+      }
+    });
+  });
+});
+</script>
+
 
 
 
