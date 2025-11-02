@@ -47,14 +47,18 @@ body {
 	margin-top: 50px;
 }
 
+
 .gift-img {
-	width: 800px;
-	height: 600px;
-	border: 6px solid white;
-	border-radius: 10px;
-	background-image: url('gift-cover.jpg');
-	background-size: cover;
+  width: min(92vw, 800px);  
+  aspect-ratio: 4 / 3;       
+  height: auto;             
+  border: 6px solid #fff;
+  border-radius: 10px;
+  background-image: url('gift-cover.jpg');
+  background-size: cover;
+  background-position: center;
 }
+
 
 #gift-img-cheers {
 	height: 400px;
@@ -170,6 +174,30 @@ body {
 	color: black;
 }
 
+
+.gift-img:hover,
+.gift-img.active { background-image: url('happy.gif'); }
+
+#gift-love:hover,
+#gift-love.active { background-image: url('love.gif'); }
+
+#gift-friends:hover,
+#gift-friends.active { background-image: url('room.gif'); }
+
+#gift-future:hover,
+#gift-future.active {
+  background-image: url('family.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #000;
+}
+
+#gift-img-cheers:hover,
+#gift-img-cheers.active {
+  background-image: url('cheers.gif');
+  background-size: contain;
+}
 
 
 
