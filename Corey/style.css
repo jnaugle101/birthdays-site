@@ -192,6 +192,11 @@ body {
   background-size: contain;
 }
 
+/* make the cheers block shorter (video-ish) */
+#gift-img-cheers { aspect-ratio: 16 / 9; }
+
+/* make the future/family block a bit taller and ensure full gif fits */
+#gift-future { aspect-ratio: 3 / 4; }
 
 
 
