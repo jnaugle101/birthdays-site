@@ -155,8 +155,7 @@ body {
 
 #gift-img-cheers:hover {
 	background-image: url('cheers.gif');
-	background-size: center;
-	background-size: contain;
+	
 
 }
 
@@ -169,13 +168,29 @@ body {
 
 
 .gift-img:hover,
-.gift-img.active { background-image: url('happy.gif'); }
+.gift-img.active { 
+	background-image: url('happy.gif'); 
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;   /* <-- add this so the whole GIF fits */
+  background-color: #000;
+}
 
 #gift-love:hover,
-#gift-love.active { background-image: url('love.gif'); }
+#gift-love.active { background-image: url('love.gif'); 
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;   /* <-- add */
+  background-color: #000;
+}
 
 #gift-friends:hover,
-#gift-friends.active { background-image: url('room.gif'); }
+#gift-friends.active { background-image: url('room.gif'); 
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;   /* <-- add */
+  background-color: #000; 
+}
 
 #gift-future:hover,
 #gift-future.active {
@@ -192,10 +207,10 @@ body {
   background-size: contain;
 }
 
-/* make the cheers block shorter (video-ish) */
+
 #gift-img-cheers { aspect-ratio: 16 / 9; }
 
-/* make the future/family block a bit taller and ensure full gif fits */
+
 #gift-future { aspect-ratio: 3 / 4; }
 
 
