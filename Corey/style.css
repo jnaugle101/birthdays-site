@@ -101,7 +101,7 @@ body {
 }
 
 
-}
+
 
 #header {
 	display: flex;
@@ -120,45 +120,11 @@ body {
   	border-radius: 12px;   
 }
 
-.gift-img:hover {
-	background-image: url('happy.gif');
-
-}
-
-
-#gift-love:hover {
-	background-image: url('love.gif');
-	
-}
-
-
-
-#gift-friends:hover {
-	background-image: url('room.gif');
-	
-}
-
-
-#gift-future:hover {
-	background-image: url('family.gif');
-	background-position: center center;
-  	background-repeat: no-repeat;
-  	background-size: contain;  
-  	background-color: #000;    
-}
-
-
-
-#gift-img-cheers:hover {
-	background-image: url('cheers.gif');
-	
-
-}
 
 #footer {
 	margin-top: 50px;
 	font-style: italic;
-	widht: 400px;
+	width: 400px;
 	color: black;
 }
 
