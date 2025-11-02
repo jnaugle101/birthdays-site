@@ -27,6 +27,36 @@
 		<h2 id='bday'> 32 Years Old</h2>
 		<h2 id='bday'>11.02.1993</h2>
 
+		<button id="music-btn"
+        style="margin:12px 0;padding:10px 16px;border-radius:10px;border:none;cursor:pointer;">
+  ▶️ Play music
+</button>
+
+<audio id="bgm" src="corey.mp3" preload="auto" loop></audio>
+
+<script>
+  (function () {
+    const btn = document.getElementById('music-btn');
+    const audio = document.getElementById('bgm');
+    let playing = false;
+
+    const update = () => btn.textContent = playing ? '⏸️ Pause music' : '▶️ Play music';
+
+    btn.addEventListener('click', async () => {
+      try {
+        if (!playing) { await audio.play(); playing = true; }
+        else { audio.pause(); playing = false; }
+        update();
+      } catch (e) {
+        console.log('Playback blocked until user interacts:', e);
+      }
+    });
+
+    update();
+  })();
+</script>
+
+
 	</div>	
 
 	<div id='notes'>
@@ -60,30 +90,30 @@
 
 
 	<div class='gift-section'>
-  <h2 class='gift-title'>Here is how happy I am for you! 🕺🏻</h2>
-  <h3 class='gift-hint'>(Hover or tap for a hint)</h3>
-  <div class='gift-img' onclick="this.classList.toggle('active')"></div>
-</div>
+  		<h2 class='gift-title'>Here is how happy I am for you! 🕺🏻</h2>
+  		<h3 class='gift-hint'>(Hover or tap for a hint)</h3>
+ 	<div class='gift-img' onclick="this.classList.toggle('active')"></div>
+	</div>
 
-<div class='gift-section'>
-  <h2 class='gift-title'>Here is how much We love you 🥰</h2>
-  <div class='gift-img' id='gift-love' onclick="this.classList.toggle('active')"></div>
-</div>
+	<div class='gift-section'>
+  		<h2 class='gift-title'>Here is how much We love you 🥰</h2>
+  	<div class='gift-img' id='gift-love' onclick="this.classList.toggle('active')"></div>
+	</div>
 
-<div class='gift-section'>
-  <h2 class='gift-title'>Here is how people react when you walk in the room! 🤩</h2>
-  <div class='gift-img' id='gift-friends' onclick="this.classList.toggle('active')"></div>
-</div>
+	<div class='gift-section'>
+  		<h2 class='gift-title'>Here is how people react when you walk in the room! 🤩</h2>
+  	<div class='gift-img' id='gift-friends' onclick="this.classList.toggle('active')"></div>
+	</div>
 
-<div class='gift-section'>
-  <h2 class='gift-title'>You will always be a part of our Family 🧑‍🧑‍🧒‍🧒</h2>
-  <div class='gift-img' id='gift-future' onclick="this.classList.toggle('active')"></div>
-</div>
+	<div class='gift-section'>
+  		<h2 class='gift-title'>You will always be a part of our Family 🧑‍🧑‍🧒‍🧒</h2>
+  	<div class='gift-img' id='gift-future' onclick="this.classList.toggle('active')"></div>
+	</div>
 
-<div class='gift-img-cheers'>
-  <h2 class='gift-title'>Enjoy Your Birthday! 🥂</h2>
-  <div class='gift-img' id='gift-img-cheers' onclick="this.classList.toggle('active')"></div>
-</div>
+	<div class='gift-img-cheers'>
+  		<h2 class='gift-title'>Enjoy Your Birthday! 🥂</h2>
+  	<div class='gift-img' id='gift-img-cheers' onclick="this.classList.toggle('active')"></div>
+	</div>
 
 
 	<p id='footer'>
