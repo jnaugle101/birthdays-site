@@ -126,30 +126,25 @@ body {
 
 .gift-img:hover {
 	background-image: url('happy.gif');
-	width: 500px;
-	height: 600px;
+
 }
 
 
 #gift-love:hover {
 	background-image: url('love.gif');
-	width: 500px;
-	height: 600px;
+	
 }
 
 
 
 #gift-friends:hover {
 	background-image: url('room.gif');
-	width: 500px;
-	height: 600px;
+	
 }
 
 
 #gift-future:hover {
 	background-image: url('family.gif');
-	width: 500px;
-	height: 600px;
 	background-position: center center;
   	background-repeat: no-repeat;
   	background-size: contain;  
@@ -160,8 +155,6 @@ body {
 
 #gift-img-cheers:hover {
 	background-image: url('cheers.gif');
-	width: 500px;
-	height: 300px;
 	background-size: center;
 	background-size: contain;
 
