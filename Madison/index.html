@@ -5,10 +5,10 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
-	<link rel='stylesheet' href='style.css' />
+	<link rel='stylesheet' href='./style.css?v=2'/>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Birthday Gift Site</title>
+	<title>Birthday Gift</title>
 
 
 
@@ -20,55 +20,154 @@
 <body>
 
 	<div id='header'>
+			<h1> Today is Madison's Birthday 🎉</h1>
+		
+		<div class='photo-row'>
+		
+		<img id='madison' src='madison1.jpeg'>
+		<img id='madison' src='madison2.jpeg'>
+		
+		</div>
 
-		<h1> Today is Shannon's Birthday 🎉</h1>
-		<img id='wife' src='shannon1.jpeg'>
-		<h2 id='bday'> 51 Years Old</h2>
-		<h2 id='bday'>08.07.1975</h2>
+		<h2 id='bday'> 30 Years Old</h2>
+		<h2 id='bday'>11.06.1995</h2>
+
+		<button id="music-btn"
+        style="margin:12px 0;padding:10px 16px;border-radius:10px;border:none;cursor:pointer;">
+  ▶️ Play music
+		</button>
+
+<audio id="bgm" src="madison.mp3" preload="auto" loop></audio>
+
+<script>
+  (function () {
+    const btn = document.getElementById('music-btn');
+    const audio = document.getElementById('bgm');
+    let playing = false;
+
+    const update = () => btn.textContent = playing ? '⏸️ Pause music' : '▶️ Play music';
+
+    btn.addEventListener('click', async () => {
+      try {
+        if (!playing) { await audio.play(); playing = true; }
+        else { audio.pause(); playing = false; }
+        update();
+      } catch (e) {
+        console.log('Playback blocked until user interacts:', e);
+      }
+    });
+
+    update();
+  })();
+</script>
+
 
 	</div>	
 
-	<div class='gift-section'>
-		<h2 class='gift-title'>Here is how happy I am for you! 💝</h2>
-		<h3 class='gift-hint'>(Hoover over for a hint)</h3>
-		<div class='gift-img'></div>
+	<div id='notes'>
 
+		<h2>Year in Review</h2>
+		<p>American Home-Grown Terrorism: Oklahoma City Bombing: a truck bomb at Alfred P. Murrah Federal Building killed 168 people and injured nearly 700 people.</p>
+		<p>The Top Song was One Sweet Day by Mariah Carey & Boyz II Men</p>
+		<p>Influential Songs include: I Wish by Skee-Lo, I Like It, I Love It by Tim McGraw, This Is How We Do It by Montell Jordan and You Oughta Know by Alanis Morissette.</p>
+		<p>The Movies to Watch include Toy Story, Apollo 13, 12 Monkeys, Babe, Jumanji, Braveheart, and Mr. Holland’s Opus.</p>
+		<p>The Java computer language was invented.</p>
+		<p>People Magazine’s Sexiest Man Alive: Brad Pitt</p>
+		<p>Notable books include The Horse Whisperer by Nicholas Evans and The Golden Compass by Philip Pullman</p>
+		<p>Price of Ballpark Hot Dogs, 16 oz: $1.49</p>
+		<p>Price of IBM Aptiva 486DX2-66 Computer, with the monitor, in 1995: $1799.00</p>
+		<p>Forbes Magazine announced that Bill Gates is the richest man in the world, with a net worth of $12.9 billion.</p>
+		<p>1 ounce of gold value: $387.00</p>
+		<p>The Funny Late Night Host: Jay Leno</p>
+		<p>The Funny Late Late Night Host: Tom Snyder</p>
+		<p>The Conversation: Did O.J. Simpson kill his ex-wife, Nicole Brown Simpson, and her friend, Ronald Goldman?</p>
+		<p>The Private Conversation: During the filming of Batman Forever, Jim Carrey approached Tommy Lee Jones to say hello. Jones replied, “I hate you. I really don’t like you… I cannot sanction your buffoonery.”</p>
+		<p>The year of the pig </p>
+		<p>Blue M&Ms didn’t exist until 1995 when a poll was held to replace the tan shade of M&M that was deemed redundant in addition to the brown M&M. The color choice was pink, blue or purple… blue won.</p>
 
+		<p>Dolly (the clone) the Sheep was born on July 5th and lived for seven years.</p>
+
+		<p>La Chupacabra, the legendary goat sucking beast was first named by Silverio Pérez, a Puerto Rican comedian, in March of 1995.</p>
+		<p>Sports:</p>
+		<p>World Series Champions: Atlanta Braves</p>
+		<p>Super Bowl XXIX Champions: San Francisco 49ers</p>
+		<p>NBA Champions: Houston Rockets</p>
+		<p>Stanley Cup Champs: New Jersey Devils</p>
+		<p>U.S. Open Golf Corey Pavin</p>
+		<p>U.S. Tennis: (Men/Ladies) Pete Sampras/Steffi Graf</p>
+		<p>Wimbledon (Men/Women): Pete Sampras/Steffi Graf</p>
+		<p>NCAA Football Champions: Nebraska</p>
+		<p>NCAA Basketball Champions: UCLA</p>
+		<p>Kentucky Derby: Thunder Gulch</p>
 
 	</div>
 
 
 
-	<div class='gift-section'>
-		<h2 class='gift-title'>Here is how much I love you 🥰</h2>
-		<div class='gift-img' id='gift-love'></div>
 
+
+	<div class='gift-section'>
+  		<h2 class='gift-title'>Here is how happy I am for you! 🕺🏻</h2>
+  		<h3 class='gift-hint'>(Hover or tap for a hint)</h3>
+ 	<div class='gift-img' onclick="this.classList.toggle('active')"></div>
 	</div>
 
 	<div class='gift-section'>
-		<h2 class='gift-title'>Here is how people react when you walk in the room! 🤩</h2>
-		<div class='gift-img' id='gift-friends'></div>
-
+  		<h2 class='gift-title'>Here is how much We love you 🥰</h2>
+  	<div class='gift-img' id='gift-love' onclick="this.classList.toggle('active')"></div>
 	</div>
 
 	<div class='gift-section'>
-		<h2 class='gift-title'>You will always be my future! 👩‍❤️‍👨</h2>
-		<div class='gift-img' id='gift-future'></div>
-
+  		<h2 class='gift-title'>Here is how you walk into the room! 🤩</h2>
+  	<div class='gift-img' id='gift-friends' onclick="this.classList.toggle('active')"></div>
 	</div>
 
+	<div class='gift-section'>
+  		<h2 class='gift-title'>You are Part of this Family 🧑‍🧑‍🧒‍🧒</h2>
+  	<div class='gift-img' id='gift-future' onclick="this.classList.toggle('active')"></div>
+	</div>
 
 	<div class='gift-img-cheers'>
-		<h2 class='gift-title'>Enjoy Your Birthday! 🥂</h2>
-		<div class='gift-img' id='gift-img-cheers'></div>
-
+  		<h2 class='gift-title'>Enjoy Your Birthday! 🥂</h2>
+  	<div class='gift-img' id='gift-img-cheers' onclick="this.classList.toggle('active')"></div>
 	</div>
+
 
 	<p id='footer'>
 
 		Gift Websites Built by Jeremy... For your own, please email: jeremyn24503@gmail.com
 
 	</p>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.gift-img').forEach(function (el) {
+    // accessibility + mobile friendliness
+    el.setAttribute('role', 'button');
+    el.setAttribute('tabindex', '0');
+
+    const toggle = () => el.classList.toggle('active');
+
+    // Desktop + iOS/Android tap
+    el.addEventListener('click', toggle);
+
+    // Some mobile browsers only fire touch events first—handle those too
+    el.addEventListener('touchstart', function (e) {
+      e.preventDefault(); // avoid ghost click / double-trigger
+      toggle();
+    }, { passive: false });
+
+    // Keyboard support
+    el.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggle();
+      }
+    });
+  });
+});
+</script>
+
 
 
 
