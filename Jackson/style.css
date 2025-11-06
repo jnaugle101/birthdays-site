@@ -10,7 +10,7 @@ body {
 	font-family: "Happy Monkey", system-ui;
   	font-weight: 400;
  	font-style: normal;
- 	background: linear-gradient(lightblue, lightpink);
+ 	background: linear-gradient(blue, lightsteelblue);
  	/*background-color: #a2d2ff; */
  	color: #ffffff;
  	display: flex;
@@ -22,7 +22,7 @@ body {
 
 
 #bday {
-	background: #EFB0C9;
+	background: steelblue;
 	padding: 5px 10px;
 	border-radius: 5px;
 	margin: 5px 0 10px 0;
@@ -30,30 +30,36 @@ body {
 }
 
 
-#wife {
-	width: 400px;
-	border-radius: 30%;
-	border: 8px solid #EFB0C9;
+#corey {
+  width: 280px;              
+  height: 280px;             
+  object-fit: cover;         
+  border-radius: 30%;        
+  border: 8px solid #000;    
+  display: inline-block;     
+  vertical-align: middle;    
+  margin: 0 8px;           
 }
+
 
 
 .gift-section {
 	margin-top: 50px;
 }
 
+
 .gift-img {
-	width: 800px;
-	height: 600px;
-	border: 6px solid white;
-	border-radius: 10px;
-	background-image: url('gift.jpg');
-	background-size: cover;
+  width: min(92vw, 800px);  
+  aspect-ratio: 4 / 3;       
+  height: auto;             
+  border: 6px solid #fff;
+  border-radius: 10px;
+  background-image: url('gift-cover.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
-#gift-img-cheers {
-	height: 400px;
 
-}
 
 
 .gift-love {
@@ -61,7 +67,7 @@ body {
 	height: 600px;
 	border: 6px solid white;
 	border-radius: 10px;
-	background-image: url('gift2.jpg');
+	background-image: url('gift-cover.jpg');
 	background-size: cover;
 }
 
@@ -71,7 +77,7 @@ body {
 	height: 600px;
 	border: 6px solid white;
 	border-radius: 10px;
-	background-image: url('gift.jpg');
+	background-image: url('gift-cover.jpg');
 	background-size: cover;
 }
 
@@ -81,7 +87,7 @@ body {
 	height: 600px;
 	border: 6px solid white;
 	border-radius: 10px;
-	background-image: url('gift2.jpg');
+	background-image: url('gift-cover.jpg');
 	background-size: cover;
 }
 
@@ -95,7 +101,7 @@ body {
 }
 
 
-}
+
 
 #header {
 	display: flex;
@@ -103,51 +109,80 @@ body {
 	align-items: center;
 }
 
-.gift-img:hover {
-	background-image: url('jim.gif');
-	width: 500px;
-	height: 600px;
+#notes {
+	max-width: 700px;         
+  	width: 90%;
+  	margin: 2rem auto;         
+  	padding: 1rem 1.25rem;
+  	text-align: left;          
+  	line-height: 1.6;
+  	background: rgba(255,255,255,0.12); 
+  	border-radius: 12px;   
 }
 
-
-#gift-love:hover {
-	background-image: url('monkey.gif');
-	width: 500px;
-	height: 600px;
-}
-
-
-
-#gift-friends:hover {
-	background-image: url('friends.gif');
-	width: 500px;
-	height: 600px;
-}
-
-
-#gift-future:hover {
-	background-image: url('couple.gif');
-	width: 500px;
-	height: 600px;
-}
-
-
-
-#gift-img-cheers:hover {
-	background-image: url('cheers.gif');
-	width: 500px;
-	height: 300px;
-	background-size: center;
-
-}
 
 #footer {
 	margin-top: 50px;
 	font-style: italic;
-	widht: 400px;
+	width: 400px;
 	color: black;
 }
 
+
+.gift-img:hover,
+.gift-img.active { 
+	background-image: url('happy.gif'); 
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;   /* <-- add this so the whole GIF fits */
+  background-color: #000;
+}
+
+#gift-love:hover,
+#gift-love.active { background-image: url('love.gif'); 
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;   /* <-- add */
+  background-color: #000;
+}
+
+#gift-friends:hover,
+#gift-friends.active { background-image: url('room.gif'); 
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;   /* <-- add */
+  background-color: #000; 
+}
+
+#gift-future:hover,
+#gift-future.active {
+  background-image: url('family.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #000;
+}
+
+#gift-img-cheers:hover,
+#gift-img-cheers.active {
+  background-image: url('cheers.gif');
+  background-size: contain;
+}
+
+
+#gift-img-cheers { aspect-ratio: 16 / 9; }
+
+
+#gift-future { aspect-ratio: 3 / 4; }
+
+
+/* make blocks obviously tappable/clickable */
+.gift-img { cursor: pointer; }
+
+/* cap size on laptops/desktops so GIFs fit comfortably */
+@media (min-width: 1024px) {
+  .gift-img { width: 640px; }  /* was up to 800px; smaller = fully viewable */
+}
 
 
 
