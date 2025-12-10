@@ -270,26 +270,55 @@ html, body {
 }
 
 
-/* === FINAL MOBILE FIX FOR 8-PHOTO GRID === */
-
-/* Force safe centering and prevent left cut-off */
+/* === Mobile-friendly gallery === */
 .carson-gallery {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+  max-width: 1200px;
+  margin: 16px auto 20px;
+  padding: 0 10px;
   box-sizing: border-box;
 }
 
-/* Phone-specific sizing adjustment */
-@media (max-width: 600px) {
-  .carson-gallery {
-    max-width: 100%;
-    padding: 0 16px;               /* keeps images away from screen edge */
-    grid-template-columns: repeat(2, 1fr);
-  }
+.carson-gallery a {
+  display: block;
+}
 
-  .carson-gallery img {
-    border-width: 3px;             /* slightly thinner border on mobile */
-    border-radius: 10px;
+.carson-gallery img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+/* Desktop → 8, then 6, then 4, then 2 columns */
+@media (max-width: 1200px) {
+  .carson-gallery {
+    grid-template-columns: repeat(6, 1fr);
   }
 }
+
+@media (max-width: 900px) {
+  .carson-gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .carson-gallery {
+    width: 100%;
+  max-width: 400px;          /* hard cap on total width */
+    margin: 16px auto;
+    padding: 0 8px;          /* keeps it away from screen edge */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 
 
 
