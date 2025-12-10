@@ -270,3 +270,29 @@ html, body {
 }
 
 
+/* === FINAL MOBILE FIX FOR 8-PHOTO GRID === */
+
+/* Force safe centering and prevent left cut-off */
+.carson-gallery {
+  box-sizing: border-box;
+}
+
+/* Phone-specific sizing adjustment */
+@media (max-width: 600px) {
+  .carson-gallery {
+    max-width: 100%;
+    padding: 0 16px;               /* keeps images away from screen edge */
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .carson-gallery img {
+    border-width: 3px;             /* slightly thinner border on mobile */
+    border-radius: 10px;
+  }
+}
+
+
+
+
+
+
