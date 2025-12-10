@@ -250,14 +250,14 @@ html, body {
 }
 
 
-/* === Two main featured Carson photos === */
-
 .carson-hero {
   display: flex;
   justify-content: center;
   gap: 12px;
   margin: 10px auto 16px auto;
+  flex-wrap: wrap;             /* ✅ allow them to go to 2 rows on small screens */
 }
+
 
 .carson-main {
   width: 280px;
@@ -268,6 +268,12 @@ html, body {
   display: inline-block;
 }
 
+@media (max-width: 600px) {
+  .carson-main {
+    width: 220px;              /* ✅ smaller on phones */
+    height: 220px;
+  }
+}
 
 //* === Carson photo grid at top === */
 
