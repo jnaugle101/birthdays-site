@@ -42,6 +42,10 @@ html, body {
   }
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 
 #bday {
@@ -270,7 +274,7 @@ html, body {
   }
 }
 
-//* === Carson photo grid at top === */
+/* === photo grid at top === */
 
 .shawn-gallery {
   display: grid;
