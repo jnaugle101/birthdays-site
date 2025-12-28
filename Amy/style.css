@@ -10,7 +10,7 @@ body {
   font-family: "Happy Monkey", system-ui;
   font-weight: 400;
   font-style: normal;
-  background: linear-gradient(lightpink);
+  background: linear-gradient(lightpink, deeppink);
   /*background-color: #a2d2ff; */
   color: #ffffff;
   display: flex;
@@ -42,18 +42,19 @@ html, body {
   }
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 
 #bday {
-	background: steelblue;
+	background: lightpink;
 	padding: 5px 10px;
 	border-radius: 5px;
 	margin: 5px 0 10px 0;
 
 }
-
-
-
 
 
 .gift-section {
@@ -114,9 +115,6 @@ html, body {
 	margin-top: 0;
 }
 
-
-
-
 #header {
 	display: flex;
 	flex-direction: column;
@@ -140,8 +138,8 @@ html, body {
 	font-style: italic;
 	width: 400px;
 	color: black;
-  align: center;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -201,7 +199,7 @@ html, body {
 }
 
 
-/* === Amy photo grid at top === */
+/* === photo grid at top === */
 
 .amy-gallery {
   display: grid;
@@ -278,7 +276,7 @@ html, body {
   }
 }
 
-//* === Amy photo grid at top === */
+/* === photo grid at top === */
 
 .amy-gallery {
   display: grid;
@@ -334,6 +332,25 @@ html, body {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-icons i {
+  font-size: 30px;
+  color: black;
+  transition: color 0.3s;
+}
+
+.social-icons i:hover {
+  color: #555;
+}
+
 
 
 

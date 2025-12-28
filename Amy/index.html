@@ -1,72 +1,375 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Amy's Birthday</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+	<link rel='stylesheet' href='./style.css?v=2'/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Amy's Birthday Gift Site</title>
 
-  <!-- cache-bust -->
-  <link rel="stylesheet" href="./style.css?v=3" />
+
+
+
 </head>
+
+
+
 <body>
 
-  <main class="amy-main">
-    <header class="amy-hero">
-      <h1>Today is Amy's Birthday 🎉</h1>
-      <p>Wishing you an amazing day full of love, laughter, and joy.</p>
-    </header>
+	<div id='header'>
 
-    <!-- photo grid -->
-    <section class="amy-gallery" aria-label="Amy photo gallery">
-      <a href="./amy1.jpeg"><img src="./amy1.jpeg" alt="Amy photo 1"></a>
-      <a href="./amy2.jpeg"><img src="./amy2.jpeg" alt="Amy photo 2"></a>
-      <a href="./amy3.jpeg"><img src="./amy3.jpeg" alt="Amy photo 3"></a>
-      <a href="./amy4.jpeg"><img src="./amy4.jpeg" alt="Amy photo 4"></a>
-      <a href="./amy5.jpeg"><img src="./amy5.jpeg" alt="Amy photo 5"></a>
-      <a href="./amy6.jpeg"><img src="./amy6.jpeg" alt="Amy photo 6"></a>
-      <a href="./amy7.jpeg"><img src="./amy7.jpeg" alt="Amy photo 7"></a>
-      <a href="./amy8.jpeg"><img src="./amy8.jpeg" alt="Amy photo 8"></a>
-    </section>
+  <h1> 🍾 Today is Amy's Birthday 🎉</h1>
 
-    <!-- hero image (optional) -->
-    <section style="text-align:center; margin-top:16px;">
-      <img src="./amy.jpeg" alt="Amy" style="max-width:min(720px, 92vw); border-radius:18px;">
-    </section>
+<div class="amy-gallery">
+  <a href="amy2.jpeg" target="_blank">
+    <img src="amy2.jpeg" alt="Amy 2">
+  </a>
 
-    <!-- music -->
-    <section style="text-align:center; margin: 18px 0 8px;">
-      <button id="music-btn" style="padding:10px 16px;border-radius:10px;border:none;cursor:pointer;">
-        ▶️ Play music
-      </button>
-      <audio id="bgm" src="./amy.mp3" preload="auto" loop></audio>
-    </section>
+  <a href="amy3.jpeg" target="_blank">
+    <img src="amy3.jpeg" alt="Amy 3">
+  </a>
 
-    <script>
-      (function () {
-        const btn = document.getElementById('music-btn');
-        const audio = document.getElementById('bgm');
-        let playing = false;
+  <a href="amy5.jpeg" target="_blank">
+    <img src="amy5.jpeg" alt="Amy 5">
+  </a>
 
-        const update = () => btn.textContent = playing ? '⏸️ Pause music' : '▶️ Play music';
+  <a href="amy6.jpeg" target="_blank">
+    <img src="amy6.jpeg" alt="Amy 6">
+  </a>
 
-        btn.addEventListener('click', async () => {
-          try {
-            if (!playing) { await audio.play(); playing = true; }
-            else { audio.pause(); playing = false; }
-            update();
-          } catch (e) {
-            console.log('Playback blocked until user interacts:', e);
+  <a href="amy7.jpeg" target="_blank">
+    <img src="amy7.jpeg" alt="Amy 7">
+  </a>
+
+  <a href="amy8.jpeg" target="_blank">
+    <img src="amy8.jpeg" alt="Amy 8">
+  </a>
+
+  <a href="amy11.jpeg" target="_blank">
+    <img src="amy11.jpeg" alt="Amy 11">
+  </a>
+
+  <a href="amy333.jpeg" target="_blank">
+    <img src="amy333.jpeg" alt="Amy 333">
+  </a>
+</div>
+
+  <!-- Optional: keep a couple of larger “feature” pics -->
+  <div class="shawn-hero">
+    <img class="amy-main" src="amy1.jpeg" alt="Amy main">
+    <img class="amy-main" src="amy4.jpeg" alt="Amy main 2">
+  </div>
+
+  <h2 id='bday'> 30 Years Old</h2>
+  <h2 id='bday'>12.28.1995</h2>
+
+ <button id="music-btn"
+    style="margin:12px 0;padding:10px 16px;border-radius:10px;border:none;cursor:pointer;">
+    ▶️ Play music
+  </button>
+
+  <audio id="bgm" src="amy.mp3" preload="auto" loop></audio>
+
+  <!-- ✅ REAL music script (not a placeholder) -->
+  <script>
+    (function () {
+      const btn = document.getElementById('music-btn');
+      const audio = document.getElementById('bgm');
+      let playing = false;
+
+      const update = () => btn.textContent = playing ? '⏸️ Pause music' : '▶️ Play music';
+
+      btn.addEventListener('click', async () => {
+        try {
+          if (!playing) {
+            await audio.play();
+            playing = true;
+          } else {
+            audio.pause();
+            playing = false;
           }
-        });
+          update();
+        } catch (e) {
+          console.log('Playback blocked until user interacts:', e);
+        }
+      });
 
-        update();
-      })();
-    </script>
-  </main>
+      update();
+    })();
+  </script>
+
+</div>
+
+
+	<div id='notes'>
+<h1>🎉Crazy December 1995🕺🏻</h1>
+
+  <h3>Quick Facts from 1995:</h3>
+<p>American Home-Grown Terrorism: Oklahoma City Bombing: a truck bomb at Alfred P. Murrah Federal Building killed 168 people and injured nearly 700 people.</p>
+<p>The Top Song was One Sweet Day by Mariah Carey & Boyz II Men</p>
+<p>Influential Songs include: I Wish by Skee-Lo, I Like It, I Love It by Tim McGraw, This Is How We Do It by Montell Jordan and You Oughta Know by Alanis Morissette.</p>
+<p>The Movies to Watch include Toy Story, Apollo 13, 12 Monkeys, Babe, Jumanji, Braveheart, and Mr. Holland’s Opus.</p>
+<p>Notable books include The Horse Whisperer by Nicholas Evans and The Golden Compass by Philip Pullman</p>
+<p>Price of Ballpark Hot Dogs, 16 oz: $1.49</p>
+<p>Price of IBM Aptiva 486DX2-66 Computer, with the monitor, in 1995: $1799.00</p>
+<p>Forbes Magazine announced that Bill Gates is the richest man in the world, with a net worth of $12.9 billion.</p>
+<p>1 ounce of gold value: $387.00</p>
+<p>The Funny Late Night Host: Jay Leno</p>
+<p>The Funny Late Late Night Host: Tom Snyder</p>
+<p>The Conversation: Did O.J. Simpson kill his ex-wife, Nicole Brown Simpson, and her friend, Ronald Goldman?</p>
+<p>The Private Conversation: During the filming of Batman Forever, Jim Carrey approached Tommy Lee Jones to say hello. Jones replied, “I hate you. I really don’t like you… I cannot sanction your buffoonery.”</p>
+<p>Year of the Pig</p>
+
+
+<h3>Top Ten Baby Names of 1995:</h3>
+<p>Jessica, Ashley, Emily, Samantha, Sarah, Michael, Matthew, Chris, Topher, Jacob, Joshua</p>
+
+<h3>Fashion Icons and Sex Symbols:</h3>
+<p>Claudia Schiffer, Elle Macpherson</p>
+
+<h3>Hollywood Hunks and Leading Men:</h3>
+<p>George Clooney, Antonio Sabàto, Jr., Colin Firth, Leonardo DiCaprio, Brad Pitt</p>
+
+<h3>“The Quotes”</h3>
+<p>“Houston, we have a problem.” – Tom Hanks, in ‘Apollo 13’</p>
+
+<p>Russian President Boris Yeltsin’s first words to US President Clinton upon meeting him in 1995 were, “Do you think O.J. did it?”</p>
+
+<p>“No Soup For You!” The Soup Nazi on TV’s Seinfeld.</p>
+
+<p>“If it doesn’t fit, you must acquit!” – Defense Attorney Johnnie Cochran at O.J. Simpsons murder trial</p>
+
+<p>Time Magazine’s Man of the Year: Newt Gingrich</p>
+
+<p>Miss America: Heather Whitestone (Birmingham, AL)</p>
+
+<p>Miss USA: Chelsi Smith (Texas)/ Shanna Moakler (New York)</p>
+
+<p>The Tragedy: Timothy McVeigh and Terry Nichols killed 168 people in Oklahoma City, including 19 children.</p>
+
+<p>The Scandals: Drew Barrymore table danced for David Letterman on his talk show, and, with her back to the audience, flashed David by lifting up her shirt.</p>
+
+<p>Patrick Combs deposited one of those fake “winning lottery checks” for $95,093.35. His bank took the deposit, and after several weeks, he took out the cash.</p>
+
+<p>Marlon Brando, as a guest on Larry King Live, kissed a surprised Larry on the mouth.</p>
+
+<p>Cindy Crawford and husband Richard Gere took out a full-page ad in the London Times to proclaim their heterosexuality. The 1994 marriage ended in 1995.</p>
+
+<p>Celebrity Paralyzed By a Horse: Christopher Reeve</p>
+
+<p>Mysterious Olympian Skater Death: Sergi Grinkov, 2-time Gold Medalist, died while practicing with his partner (and wife) Ekaterina Gordeeva</p>
+
+<h3>Pop Culture Facts & History:</h3>
+<p>The Rock and Roll Hall of fame opened in Cleveland, Ohio.</p>
+
+<p>The 1995 Whitney Houston single Exhale holds the record for longest streak at #2 on the Hot 100</p>
+
+<p>Newsweek published an article scoffing the future of the internet. It laughed at the idea that people would get news, learn, or buy airline tickets online.</p>
+
+<p>Blue M&Ms didn’t exist until 1995</p> 
+
+<p>Dolly (the clone) the Sheep was born on July 5th and lived for seven years.</p>
+
+<p>La Chupacabra, the legendary goat sucking beast was first named by Silverio Pérez, a Puerto Rican comedian, in March of 1995.</p>
+
+<p>The X Games were the first broadcast on ESPN.</p>
+
+<p>Jim Carrey was nominated for Worst New Star in the 1995 Golden Raspberry Awards for his roles in Dumb & Dumber, Ace Ventura: Pet Detective, and The Mask.</p>
+
+<p>Starbuck’s Frappuccino was released in 1995.</p>
+
+<p>A coffee company in Syracuse, NY, renamed itself Federal Espresso in 1995, using branding that Federal Express(FedEx) claimed belonged to them.  Federal Express sued and won. The company has gone by the name Freedom of Espresso ever since.</p>
+
+<p>People have been meeting online via Match.com since 1995.</p>
+
+<p>AuctionWeb began in San Jose, California, on September 3, 1995,</p>
+
+<p>The first professional sports game streamed online was the Mariners vs the Yankees in September 1995. The Seattle Mariners beat the New York Yankees 6-5.</p>
+
+<p>CNET launched www.shareware.com (now downloads.digitaltrends.com/)</p>
+
+<p>Tom Kenny (the voice of Spongebob) and Jill Talley (the voice of Karen, Plankton’s computer wife) have been married since 1995.</p>
+
+<p>The automobile ‘Blind Spot’ problem was solved in 1995 when engineer George Platzer published a 16 pages paper detailing the correct setup procedure of side-view mirrors.</p>
+
+<p>The George Foreman Lean Mean Grilling Machine was released.</p>
+
+<p>Windows 95 was the second most installed piece of software on computers in 1995. Video game DOOM was first.</p>
+
+<p>Salmon sushi wasn’t introduced in Japan until 1995 when Norwegian businessmen convinced Japanese businessmen that Atlantic Salmon was safe to eat raw.</p>
+
+<p>JavaScript was created by Netscape programmer Brendan Eich.</p>
+
+<p>When he landed back on Earth on March 22, cosmonaut Valeri Polyakov returned with the record for space flight – 437 days.</p>
+
+<p>George Samuel Hurst invented the first resistive touchscreen who received US Patent (#3,911,215) on October 7, 1975 and produced the first version in 1982.</p>
+
+<p>Rock Musician Heart Failure Death: Jerry Garcia</p>
+
+<p>Queen of Tejano Pop Star Murder: Selena, killed by the ex-president of her fan club.</p>
+
+<p>Cost of a Super Bowl ad in 1995: $1,150,000</p>
+
+<h3>Mysteries:</h3>
+<p>After the 1995 Oklahoma City Bombing, there was a mysterious detached leg found in the rubble of the destroyed building. Since all 168 victims’ legs have been accounted for, the left leg has perplexed investigators and has yet to be traced back to an owner.</p>
+
+<p>The government of China kidnapped a 6-year-old Tibetan boy, the Panchen Lama, and replaced him with a puppet of their own choosing. The real Panchen Lama was the youngest political prisoner in the world at the time of his arrest and has never been heard from since.</p>
+
+<h3>Nobel Prize Winners:</h3>
+<p>Physics – Martin L. Perl, Frederick Reines</p>
+<p>Chemistry – Paul J. Crutzen, Mario J. Molina, F. Sherwood Rowland</p>
+<p>Medicine – Edward B. Lewis, Christiane Nüsslein-Volhard, Eric F. Wieschaus</p>
+<p>Literature – Seamus Heaney</p>
+<p>Bank of Sweden Prize in Economic Sciences in Memory of Alfred Nobel – Robert Lucas, Jr.</p>
+<p>Peace – Joseph Rotblat and the Pugwash Conferences on Science and World Affairs</p>
+
+<h3>1st Appearances & 1995’s Most Popular Christmas Gifts, Toys and Presents:</h3>
+<p>Barbie as Eliza Doolittle in My Fair Lady, Barbie as Maria in the Sound of Music, Barbie and Ken Star Trek giftset</p>
+
+<h3>Broadway Show :</h3>
+<p>Smokey Joe’s Cafe (Review) Opened on March 2, 1995, and closed on January 16, 2000</p>
+
+<h3>Best Film Oscar Winner:</h3>
+<p>Forrest Gump (presented in 1995)</p>
+
+
+<h3>The Big Movies:</h3>
+<p>1.  Toy Story</p>
+<p>2.  Batman Forever</p>
+<p>3.  Apollo 13</p>
+<p>4.  Pocahontas</p>
+<p>5.  Ace Ventura: When Nature Calls</p>
+<p>6.  GoldenEye</p>
+<p>7.  Jumanji</p>
+<p>8.  Casper</p>
+<p>9.  Seven</p>
+<p>10. Die Hard: With A Vengeance</p>
+
+<h3>1995 Most Popular TV Shows:</h3>
+<p>1.  E.R. (NBC)</p>
+<p>2.  Seinfeld (NBC)</p>
+<p>3.  Friends (NBC)</p>
+<p>4.  Caroline In The City (NBC)</p>
+<p>5.  The Single Guy (NBC)</p>
+<p>6.  Home Improvement (ABC)</p>
+<p>7.  Boston Common (FOX)</p>
+<p>8.   60 Minutes (CBS)</p>
+<p>9.  NYPD Blue (ABC)</p>
+<p>10. Frasier (NBC)</p>
+
+<h3>1995 Billboard Number One Songs:</h3>
+<p>December 3, 1994 – January 13, 1995: On Bended Knee – Boyz II Men</p>
+
+
+<p>December 2, 1995 – March 22, 1996: One Sweet Day – Mariah Carey and Boyz II Men</p>
+
+<h3>Sports:</h3>
+<p>World Series Champions: Atlanta Braves</p>
+<p>Super Bowl XXIX Champions: San Francisco 49ers</p>
+<p>NBA Champions: Houston Rockets</p>
+<p>Stanley Cup Champs: New Jersey Devils</p>
+<p>U.S. Open Golf Corey Pavin</p>
+<p>U.S. Tennis: (Men/Ladies) Pete Sampras/Steffi Graf</p>
+<p>Wimbledon (Men/Women): Pete Sampras/Steffi Graf</p>
+<p>NCAA Football Champions: Nebraska</p>
+<p>NCAA Basketball Champions: UCLA</p>
+<p>Kentucky Derby: Thunder Gulch</p>
+
+	</div>
+
+
+
+
+
+	<div class='gift-section'>
+  		<h2 class='gift-title'>Here is how happy I am for you! 🕺🏻</h2>
+  		<h3 class='gift-hint'>(Hover or tap for a hint)</h3>
+ 	<div class='gift-img' onclick="this.classList.toggle('active')"></div>
+	</div>
+
+	<div class='gift-section'>
+  		<h2 class='gift-title'>Here is how much We love you 🥰</h2>
+  		<h3 class='gift-hint'>(Hover or tap for a hint)</h3>
+  	<div class='gift-img' id='gift-love' onclick="this.classList.toggle('active')"></div>
+	</div>
+
+	<div class='gift-section'>
+  		<h2 class='gift-title'>Here is how people react when you walk in the room! 🤩</h2>
+  		<h3 class='gift-hint'>(Hover or tap for a hint)</h3>
+  	<div class='gift-img' id='gift-friends' onclick="this.classList.toggle('active')"></div>
+	</div>
+
+	<div class='gift-section'>
+  		<h2 class='gift-title'>You will always be a part of our Family 🧑‍🧑‍🧒‍🧒</h2>
+  		<h3 class='gift-hint'>(Hover or tap for a hint)</h3>
+  	<div class='gift-img' id='gift-future' onclick="this.classList.toggle('active')"></div>
+	</div>
+
+	<div class='gift-img-cheers'>
+  		<h2 class='gift-title'>Enjoy Your Birthday! 🥂</h2>
+  		<h3 class='gift-hint'>(Hover or tap for a hint)</h3>
+  	<div class='gift-img' id='gift-img-cheers' onclick="this.classList.toggle('active')"></div>
+	</div>
+
+
+<div id="footer">
+  <p>Gift Websites Built by Jeremy... For your own, please email: jeremyn24503@gmail.com</p>
+  <p>Music by VireTone: https://www.viretonemusic.com</p>
+  <div class="social-icons">
+    <a href="https://www.pinterest.com/viretonemusic/" target="_blank">
+      <i class="fab fa-pinterest"></i>
+    </a>
+    <a href="https://www.facebook.com/viretonemusic" target="_blank">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a href="https://www.instagram.com/viretone/" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.youtube.com/@VireTone" target="_blank">
+      <i class="fab fa-youtube"></i>
+    </a>
+    <a href="https://www.tiktok.com/@viretonemusic" target="_blank">
+      <i class="fab fa-tiktok"></i>
+    </a>
+  </div>
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.gift-img').forEach(function (el) {
+    // accessibility + mobile friendliness
+    el.setAttribute('role', 'button');
+    el.setAttribute('tabindex', '0');
+
+    const toggle = () => el.classList.toggle('active');
+
+    // Desktop + iOS/Android tap
+    el.addEventListener('click', toggle);
+
+    // Some mobile browsers only fire touch events first—handle those too
+    el.addEventListener('touchstart', function (e) {
+      e.preventDefault(); // avoid ghost click / double-trigger
+      toggle();
+    }, { passive: false });
+
+    // Keyboard support
+    el.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggle();
+      }
+    });
+  });
+});
+</script>
+
+
+
 
 </body>
 </html>
