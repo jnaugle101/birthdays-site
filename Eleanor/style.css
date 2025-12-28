@@ -6,19 +6,42 @@
 
 
 body {
-	text-align: center;
-	font-family: "Happy Monkey", system-ui;
-  	font-weight: 400;
- 	font-style: normal;
- 	background: linear-gradient(blue, lightsteelblue);
- 	/*background-color: #a2d2ff; */
- 	color: #ffffff;
- 	display: flex;
- 	flex-direction: column;
- 	align-items: center;
-
- 
+  text-align: center;
+  font-family: "Happy Monkey", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  background: linear-gradient(darkblue, lightsteelblue);
+  /*background-color: #a2d2ff; */
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;   /* ⬅ changed from center */
 }
+
+
+/* Prevent sideways scrolling on mobile */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+/* Default heading style */
+#header h1 {
+  margin: 16px 0;
+  padding: 0 12px;      /* keeps text away from edges */
+}
+
+/* Mobile-friendly title */
+@media (max-width: 600px) {
+  #header h1 {
+    font-size: 1.6rem;  /* smaller on phones */
+    line-height: 1.2;
+    text-wrap: balance; /* nicer wrapping where supported */
+    word-wrap: break-word;
+  }
+}
+
 
 
 #bday {
@@ -30,16 +53,6 @@ body {
 }
 
 
-#corey {
-  width: 280px;              
-  height: 280px;             
-  object-fit: cover;         
-  border-radius: 30%;        
-  border: 8px solid #000;    
-  display: inline-block;     
-  vertical-align: middle;    
-  margin: 0 8px;           
-}
 
 
 
@@ -134,7 +147,7 @@ body {
 	background-image: url('happy.gif'); 
 	background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;   /* <-- add this so the whole GIF fits */
+  background-size: contain;   
   background-color: #000;
 }
 
@@ -147,7 +160,7 @@ body {
 }
 
 #gift-friends:hover,
-#gift-friends.active { background-image: url('room.gif'); 
+#gift-friends.active { background-image: url('room.avif'); 
 	background-position: center;
   background-repeat: no-repeat;
   background-size: contain;   /* <-- add */
@@ -183,6 +196,142 @@ body {
 @media (min-width: 1024px) {
   .gift-img { width: 640px; }  /* was up to 800px; smaller = fully viewable */
 }
+
+
+/* === Carson photo grid at top === */
+
+.carson-gallery {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;                 /* more space */
+  max-width: 1200px;        /* wider = larger photos */
+  margin: 16px auto 20px;
+  padding: 0 10px;
+}
+
+.carson-gallery a {
+  display: block;
+}
+
+.carson-gallery img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;      /* smoother rounding */
+  border: 4px solid #fff;  /* thicker border */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+/* Hover zoom effect */
+.carson-gallery img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 18px rgba(255,255,255,0.8);
+}
+
+/* 🔻 Responsive scaling */
+@media (max-width: 1200px) {
+  .carson-gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .carson-gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .carson-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+.carson-hero {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 10px auto 16px auto;
+  flex-wrap: wrap;             /* ✅ allow them to go to 2 rows on small screens */
+}
+
+
+.carson-main {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 30%;
+  border: 8px solid #000;
+  display: inline-block;
+}
+
+@media (max-width: 600px) {
+  .carson-main {
+    width: 220px;              /* ✅ smaller on phones */
+    height: 220px;
+  }
+}
+
+//* === Carson photo grid at top === */
+
+.carson-gallery {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+  max-width: 1200px;
+  margin: 16px auto 20px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.carson-gallery a {
+  display: block;
+}
+
+.carson-gallery img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+/* Hover zoom effect */
+.carson-gallery img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 18px rgba(255,255,255,0.8);
+}
+
+/* Desktop → 8, then 6, then 4 */
+@media (max-width: 1200px) {
+  .carson-gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .carson-gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Phones: two columns, guaranteed to fit */
+@media (max-width: 600px) {
+  .carson-gallery {
+    width: 100%;
+    max-width: 360px;             /* hard cap so it fits even on small phones */
+    margin: 16px auto;
+    padding: 0 8px;               /* a bit of breathing room from edges */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 
 
 

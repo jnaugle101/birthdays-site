@@ -21,67 +21,127 @@
 
 	<div id='header'>
 
-		<h1> Today is Corey's Birthday 🎉</h1>
-		<img id='corey' src='corey1.jpeg'>
-		<img id='corey' src='corey2.jpeg'>
-		<h2 id='bday'> 32 Years Old</h2>
-		<h2 id='bday'>11.02.1993</h2>
+  <h1> Today is Carson's Birthday 🎉</h1>
 
-		<button id="music-btn"
-        style="margin:12px 0;padding:10px 16px;border-radius:10px;border:none;cursor:pointer;">
-  ▶️ Play music
-</button>
+<div class="carson-gallery">
+  <a href="carson1.jpeg" target="_blank">
+    <img src="carson1.jpeg" alt="Carson 1">
+  </a>
 
-<audio id="bgm" src="corey.mp3" preload="auto" loop></audio>
+  <a href="carson2.jpeg" target="_blank">
+    <img src="carson2.jpeg" alt="Carson 2">
+  </a>
 
-<script>
-  (function () {
-    const btn = document.getElementById('music-btn');
-    const audio = document.getElementById('bgm');
-    let playing = false;
+  <a href="carson3.jpeg" target="_blank">
+    <img src="carson3.jpeg" alt="Carson 3">
+  </a>
 
-    const update = () => btn.textContent = playing ? '⏸️ Pause music' : '▶️ Play music';
+  <a href="carson4.jpeg" target="_blank">
+    <img src="carson4.jpeg" alt="Carson 4">
+  </a>
 
-    btn.addEventListener('click', async () => {
-      try {
-        if (!playing) { await audio.play(); playing = true; }
-        else { audio.pause(); playing = false; }
-        update();
-      } catch (e) {
-        console.log('Playback blocked until user interacts:', e);
-      }
-    });
+  <a href="crayons.jpeg" target="_blank">
+    <img src="crayons.jpeg" alt="Carson 5">
+  </a>
 
-    update();
-  })();
-</script>
+  <a href="goose.jpeg" target="_blank">
+    <img src="goose.jpeg" alt="Carson 6">
+  </a>
 
+  <a href="carson-j.jpeg" target="_blank">
+    <img src="carson-j.jpeg" alt="Carson 7">
+  </a>
 
-	</div>	
+  <a href="carson-jaela.jpeg" target="_blank">
+    <img src="carson-jaela.jpeg" alt="Carson 8">
+  </a>
+</div>
+
+  <!-- Optional: keep a couple of larger “feature” pics -->
+  <div class="carson-hero">
+    <img class="carson-main" src="carson1.jpeg" alt="Carson main">
+    <img class="carson-main" src="carson2.jpeg" alt="Carson main 2">
+  </div>
+
+  <h2 id='bday'> 24 Years Old</h2>
+  <h2 id='bday'>12.12.2001</h2>
+
+ <button id="music-btn"
+    style="margin:12px 0;padding:10px 16px;border-radius:10px;border:none;cursor:pointer;">
+    ▶️ Play music
+  </button>
+
+  <audio id="bgm" src="carson.mp3" preload="auto" loop></audio>
+
+  <!-- ✅ REAL music script (not a placeholder) -->
+  <script>
+    (function () {
+      const btn = document.getElementById('music-btn');
+      const audio = document.getElementById('bgm');
+      let playing = false;
+
+      const update = () => btn.textContent = playing ? '⏸️ Pause music' : '▶️ Play music';
+
+      btn.addEventListener('click', async () => {
+        try {
+          if (!playing) {
+            await audio.play();
+            playing = true;
+          } else {
+            audio.pause();
+            playing = false;
+          }
+          update();
+        } catch (e) {
+          console.log('Playback blocked until user interacts:', e);
+        }
+      });
+
+      update();
+    })();
+  </script>
+
+</div>
+
 
 	<div id='notes'>
 		<h2>Major Events</h2>
-		<p>World-Changing Event: Intel introduced the Pentium family of 32-bit microprocessors.</p>
-		<p>The biggest song was Dreamlover by Mariah Carey</p>
-		<p>The Movies to Watch include Jurassic Park, Schindler’s List, Sleepless in Seattle, and Free Willy.</p>
-		<p>The Most Famous People in America were probably Denzel Washington and Julia Roberts.</p>
-		<p>Notable books include The Celestine Prophecy by James Redfield and The Shipping News by E. Annie Prouls.</p>
-		<p>Sony (radio) Walkman: $29.98</p>
-		<p>Price of Domino’s large pizza, two toppings in 1993: $9.99</p>
-		<p>The Funny Guy was: Jeff Foxworthy</p>
-		<h2>Year in Review</h2>
-		<p>January: Bill Clinton was inaugurated as the 42nd President of the United States.</p>
-		<p>February: 1993 World Trade Center bombing: In New York City, a van bomb parked below the North Tower of the World Trade Center explodes, killing six and injuring over 1,000.</p>
-		<p>March: Rodney King testified at the federal trial of four Los Angeles, California police officers accused of violating his civil rights when they beat him during an arrest.</p>
-		<p>April: the Waco siege ended in a fire at the Branch Davidian compound in Texas, resulting in the deaths of 76 people.</p>
-		<p>May: the Supreme Court of the United States ruled in Daubert v. Merrell Dow Pharmaceuticals that expert testimony must be based on the scientific knowledge established through the scientific method.</p>
-		<p>June: the Signing of the Oslo Accords marked the beginning of the peace process between Israel and the Palestine Liberation Organization.</p>
-		<p>July: the Great Flood of 1993 began in the Mississippi and Missouri River basins, resulting in widespread damage and dozens of deaths.</p>
-		<p>August: the Chemical Weapons Convention, which banned the production, stockpiling, and use of chemical weapons, came into force.</p>
-		<p>September: 47 people were killed in the Big Bayou Canot Rail Accident: An Amtrak Sunset Limited derails on a bridge that a barge had damaged near Mobile, Alabama. It is the deadliest train wreck in Amtrak’s history.</p>
-		<p>October: Actor River Phoenix died of drug-induced heart failure on the sidewalk outside the West Hollywood nightclub The Viper Room.</p>
-		<p>November: The Maastricht Treaty, which established the European Union, came into effect.</p>
-		<p>December: STS-61: NASA launched the Space Shuttle Endeavour on a mission to repair an optical flaw in the Hubble Space Telescope.</p>
+		<p>World Changing Event: September 11 terrorist attack in New York City</p>
+<p>The Top Song was All For You by Janet Jackson</p>
+<p>The Movies to Watch include Shrek, Harry Potter and the Sorcerer’s Stone, Monsters Inc, Legally Blonde and Ocean’s 11</p>
+<p>The Most Famous Fictional Person in America was probably Harry Potter</p>
+<p>The Most Famous Real Person in America was probably Angelina Jolie</p>
+<p>The 21st century didn’t begin on January 1st, 2000. It actually began on January 1st, 2001. This is because the first year of a century is the year 01, never 00.</p>
+<p>Price of Playstation 2: $299.97</p>
+<p>Game Boy Advance: $89.97</p>
+<p>iPod (1st Generation): $399.00</p>
+<p>The Funny Late Night Host: Jay Leno</p>
+<p>The Controversial Funny Guy: Gilbert Gottfried</p>
+<p>The Longest English Sentence Written: The longest sentence in a book is believed to appear in the 2001 novel The Rotters’ Club by Jonathan Coe which consisted of 13,955 words.</p>
+<p>Creepypasta: Although short, horror-themed stories have been told forever, the first Creepypasta story was Ted the Caver on an Angelfire website.</p>
+<p>Barry Bonds hit 73 Home Runs*. * steroid use was allegedly involved</p>
+<p>Pizza Hut Delivered a Pizza to the International Space Station. It cost over a million dollars.</p>
+
+<p>Cost of a Super Bowl ad in 2001: $2,100,000</p>
+
+<p>iPod was released in October 2001.</p>
+
+<p>The X-Box came out in November 2001.</p>
+
+<p>…Everybody else was watching SpongeBob Squarepants</p>
+<p>December 15, 2001 - U Got It Bad – Usher</p>
+
+
+<p>World Series Champions: Arizona Diamondbacks</p>
+<p>Super Bowl XXXV Champions: Baltimore Ravens</p>
+<p>NBA Champions: Los Angeles Lakers</p>
+<p>Stanley Cup Champs: Colorado Avalanche</p>
+<p>U.S. Open Golf Retief Goosen</p>
+<p>U.S. Tennis: (Men/Ladies) Lleyton Hewitt/Venus Williams</p>
+<p>Wimbledon (Men/Women): Goran Ivanisevic/Venus Williams</p>
+<p>NCAA Football Champions: Miami</p>
+<p>NCAA Basketball Champions: Duke</p>
+<p>Kentucky Derby: Monarchos</p>
 
 	</div>
 
@@ -97,21 +157,25 @@
 
 	<div class='gift-section'>
   		<h2 class='gift-title'>Here is how much We love you 🥰</h2>
+  		<h3 class='gift-hint'>(Hover or tap for a hint)</h3>
   	<div class='gift-img' id='gift-love' onclick="this.classList.toggle('active')"></div>
 	</div>
 
 	<div class='gift-section'>
   		<h2 class='gift-title'>Here is how people react when you walk in the room! 🤩</h2>
+  		<h3 class='gift-hint'>(Hover or tap for a hint)</h3>
   	<div class='gift-img' id='gift-friends' onclick="this.classList.toggle('active')"></div>
 	</div>
 
 	<div class='gift-section'>
   		<h2 class='gift-title'>You will always be a part of our Family 🧑‍🧑‍🧒‍🧒</h2>
+  		<h3 class='gift-hint'>(Hover or tap for a hint)</h3>
   	<div class='gift-img' id='gift-future' onclick="this.classList.toggle('active')"></div>
 	</div>
 
 	<div class='gift-img-cheers'>
   		<h2 class='gift-title'>Enjoy Your Birthday! 🥂</h2>
+  		<h3 class='gift-hint'>(Hover or tap for a hint)</h3>
   	<div class='gift-img' id='gift-img-cheers' onclick="this.classList.toggle('active')"></div>
 	</div>
 
